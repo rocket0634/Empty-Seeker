@@ -9,7 +9,7 @@ namespace EmptySeeker {
         private static void Main(string[] args)
         {
             int count = 0;
-            string[] directories = Directory.GetDirectories(Path.Combine(Directory.GetCurrentDirectory(), "../"));
+            string[] directories = Directory.GetDirectories(Directory.GetCurrentDirectory());
             foreach (string dir in directories) {
                 string loc = Path.Combine(dir, "modInfo.json");
                 if (File.Exists(loc))
